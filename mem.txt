@@ -1,0 +1,2 @@
+ egrep -r "^#+\s.*?$" . |sed -E 's/:(#+)/\t\1\t/'|sed -E 's/(\(@id.*\))$/\t\1/' >tittles.txt
+egrep -ro "\[[^]]*\]\(@[^\)]*\)" .|sed -e s/:/'\t'/|sed -E 's/(\(@.*\))$/\t\1/'  >refs.txt

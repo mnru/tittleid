@@ -1,0 +1,841 @@
+./devdocs/ast.md	#	 Julia ASTs
+./devdocs/ast.md	##	 Lowered form
+./devdocs/ast.md	###	 Expr types
+./devdocs/ast.md	###	 Method
+./devdocs/ast.md	###	 MethodInstance
+./devdocs/ast.md	###	 CodeInfo
+./devdocs/ast.md	##	 Surface syntax AST
+./devdocs/ast.md	###	 Calls
+./devdocs/ast.md	###	 Operators
+./devdocs/ast.md	###	 Bracketed forms
+./devdocs/ast.md	###	 Macros
+./devdocs/ast.md	###	 Strings
+./devdocs/ast.md	###	 Imports and such
+./devdocs/ast.md	###	 Numbers
+./devdocs/ast.md	###	 Block forms
+./devdocs/ast.md	###	 Quote expressions
+./devdocs/ast.md	###	 Line numbers
+./devdocs/backtraces.md	#	 Reporting and analyzing crashes (segfaults)
+./devdocs/backtraces.md	##	 [Version/Environment info]	(@id dev-version-info)
+./devdocs/backtraces.md	##	 Segfaults during bootstrap (`sysimg.jl`)
+./devdocs/backtraces.md	##	 Segfaults when running a script
+./devdocs/backtraces.md	##	 Errors during Julia startup
+./devdocs/backtraces.md	##	 Glossary
+./devdocs/boundscheck.md	#	 Bounds checking
+./devdocs/boundscheck.md	##	 Eliding bounds checks
+./devdocs/boundscheck.md	##	 Propagating inbounds
+./devdocs/boundscheck.md	##	 The bounds checking call hierarchy
+./devdocs/callconv.md	#	 Calling Conventions
+./devdocs/callconv.md	##	 Julia Native Calling Convention
+./devdocs/callconv.md	##	 JL Call Convention
+./devdocs/callconv.md	##	 C ABI
+./devdocs/cartesian.md	#	 Base.Cartesian
+./devdocs/cartesian.md	##	 Principles of usage
+./devdocs/cartesian.md	##	 Basic syntax
+./devdocs/cartesian.md	###	 Supplying the number of expressions
+./devdocs/cartesian.md	###	 Anonymous-function expressions as macro arguments
+./devdocs/cartesian.md	####	 [Macro reference]	(@id dev-cartesian-reference)
+./devdocs/compiler.md	#	 High-level Overview of the Native-Code Generation Process
+./devdocs/compiler.md	##	 Representation of Pointers
+./devdocs/compiler.md	##	 Representation of Intermediate Values
+./devdocs/compiler.md	##	 Union representation
+./devdocs/compiler.md	##	 Specialized Calling Convention Signature Representation
+./devdocs/debuggingtips.md	#	 gdb debugging tips
+./devdocs/debuggingtips.md	##	 Displaying Julia variables
+./devdocs/debuggingtips.md	##	 Useful Julia variables for Inspecting
+./devdocs/debuggingtips.md	##	 Useful Julia functions for Inspecting those variables
+./devdocs/debuggingtips.md	##	 Inserting breakpoints for inspection from gdb
+./devdocs/debuggingtips.md	##	 Inserting breakpoints upon certain conditions
+./devdocs/debuggingtips.md	###	 Loading a particular file
+./devdocs/debuggingtips.md	###	 Calling a particular method
+./devdocs/debuggingtips.md	##	 Dealing with signals
+./devdocs/debuggingtips.md	##	 Debugging during Julia's build process (bootstrap)
+./devdocs/debuggingtips.md	##	 Debugging precompilation errors
+./devdocs/debuggingtips.md	##	 Mozilla's Record and Replay Framework (rr)
+./devdocs/eval.md	#	 Eval of Julia code
+./devdocs/eval.md	##	 Julia Execution
+./devdocs/eval.md	##	 [Parsing]	(@id dev-parsing)
+./devdocs/eval.md	##	 [Macro Expansion]	(@id dev-macro-expansion)
+./devdocs/eval.md	##	 [Type Inference]	(@id dev-type-inference)
+./devdocs/eval.md	##	 [JIT Code Generation]	(@id dev-codegen)
+./devdocs/eval.md	##	 [System Image]	(@id dev-sysimg)
+./devdocs/functions.md	#	 Julia Functions
+./devdocs/functions.md	##	 Method Tables
+./devdocs/functions.md	##	 Function calls
+./devdocs/functions.md	##	 Adding methods
+./devdocs/functions.md	##	 Creating generic functions
+./devdocs/functions.md	##	 Closures
+./devdocs/functions.md	##	 Constructors
+./devdocs/functions.md	##	 Builtins
+./devdocs/functions.md	##	 Keyword arguments
+./devdocs/functions.md	##	 Compiler efficiency issues
+./devdocs/inference.md	#	 Inference
+./devdocs/inference.md	##	 How inference works
+./devdocs/inference.md	##	 Debugging inference.jl
+./devdocs/inference.md	#	 Get the method
+./devdocs/inference.md	#	 Create variables needed to call `typeinf_code`
+./devdocs/inference.md	#	 Returns the CodeInfo object for `convert(Int, ::UInt)`:
+./devdocs/inference.md	##	 The inlining algorithm (inline_worthy)
+./devdocs/inference.md	#	 Get the CodeInfo object
+./devdocs/inference.md	#	 Calculate cost of each statement
+./devdocs/init.md	#	 Initialization of the Julia runtime
+./devdocs/init.md	##	 main()
+./devdocs/init.md	##	 julia_init()
+./devdocs/init.md	##	 true_main()
+./devdocs/init.md	##	 Base._start
+./devdocs/init.md	##	 Base.eval
+./devdocs/init.md	##	 jl_atexit_hook()
+./devdocs/init.md	##	 julia_save()
+./devdocs/libgit2.md	#	 Base.LibGit2
+./devdocs/libgit2.md	###	 Functionality
+./devdocs/llvm.md	#	 Working with LLVM
+./devdocs/llvm.md	##	 Overview of Julia to LLVM Interface
+./devdocs/llvm.md	###	 Alias Analysis
+./devdocs/llvm.md	##	 Building Julia with a different version of LLVM
+./devdocs/llvm.md	##	 Passing options to LLVM
+./devdocs/llvm.md	##	 Debugging LLVM transformations in isolation
+./devdocs/llvm.md	##	 Improving LLVM optimizations for Julia
+./devdocs/llvm.md	##	 The jlcall calling convention
+./devdocs/llvm.md	##	 GC root placement
+./devdocs/llvm.md	###	 Representation
+./devdocs/llvm.md	###	 Invariants
+./devdocs/llvm.md	###	 Supporting ccall
+./devdocs/llvm.md	###	 Supporting pointer_from_objref
+./devdocs/llvm.md	###	 Keeping values alive in the absence of uses
+./devdocs/locks.md	#	 Proper maintenance and care of multi-threading locks
+./devdocs/locks.md	##	 Locks
+./devdocs/locks.md	##	 Broken Locks
+./devdocs/locks.md	##	 Shared Global Data Structures
+./devdocs/meta.md	#	 Talking to the compiler (the `:meta` mechanism)
+./devdocs/object.md	#	 Memory layout of Julia Objects
+./devdocs/object.md	##	 Object layout (jl_value_t)
+./devdocs/object.md	##	 Garbage collector mark bits
+./devdocs/object.md	##	 Object allocation
+./devdocs/offset-arrays.md	#	 Arrays with custom indices
+./devdocs/offset-arrays.md	##	 Generalizing existing code
+./devdocs/offset-arrays.md	###	 Background
+./devdocs/offset-arrays.md	###	 Using `indices` for bounds checks and loop iteration
+./devdocs/offset-arrays.md	###	 Linear indexing (`linearindices`)
+./devdocs/offset-arrays.md	###	 Allocating storage using generalizations of `similar`
+./devdocs/offset-arrays.md	###	 Deprecations
+./devdocs/offset-arrays.md	##	 Writing custom array types with non-1 indexing
+./devdocs/offset-arrays.md	###	 Do **not** implement `size` or `length`
+./devdocs/offset-arrays.md	###	 Do **not** annotate bounds checks
+./devdocs/offset-arrays.md	###	 Custom `AbstractUnitRange` types
+./devdocs/offset-arrays.md	###	 Specializing `indices`
+./devdocs/offset-arrays.md	###	 Specializing `similar`
+./devdocs/offset-arrays.md	###	 Specializing `reshape`
+./devdocs/offset-arrays.md	##	 Summary
+./devdocs/reflection.md	#	 Reflection and introspection
+./devdocs/reflection.md	##	 Module bindings
+./devdocs/reflection.md	##	 DataType fields
+./devdocs/reflection.md	##	 Subtypes
+./devdocs/reflection.md	##	 DataType layout
+./devdocs/reflection.md	##	 Function methods
+./devdocs/reflection.md	##	 Expansion and lowering
+./devdocs/reflection.md	##	 Intermediate and compiled representations
+./devdocs/require.md	#	 Module loading
+./devdocs/require.md	##	 Experimental features
+./devdocs/require.md	###	 Module loading callbacks
+./devdocs/require.md	#	 Get the fully-qualified name of a module.
+./devdocs/sanitizers.md	#	 Sanitizer support
+./devdocs/sanitizers.md	##	 General considerations
+./devdocs/sanitizers.md	##	 Address Sanitizer (ASAN)
+./devdocs/sanitizers.md	##	 Memory Sanitizer (MSAN)
+./devdocs/stdio.md	#	 printf() and stdio in the Julia runtime
+./devdocs/stdio.md	##	 Libuv wrappers for stdio
+./devdocs/stdio.md	##	 Interface between JL_STD* and Julia code
+./devdocs/stdio.md	##	 printf() during initialization
+./devdocs/stdio.md	##	 Legacy `ios.c` library
+./devdocs/subarrays.md	#	 SubArrays
+./devdocs/subarrays.md	##	 Indexing: cartesian vs. linear indexing
+./devdocs/subarrays.md	##	 Index replacement
+./devdocs/subarrays.md	##	 SubArray design
+./devdocs/subarrays.md	###	 Type parameters and fields
+./devdocs/subarrays.md	###	 Index translation
+./devdocs/subarrays.md	###	 Linear indexing
+./devdocs/subarrays.md	###	 A few details
+./devdocs/sysimg.md	#	 System Image Building
+./devdocs/sysimg.md	##	 Building the Julia system image
+./devdocs/sysimg.md	##	 System image optimized for multiple microarchitectures
+./devdocs/sysimg.md	###	 Specifying multiple system image targets
+./devdocs/sysimg.md	###	 Implementation overview
+./devdocs/types.md	#	 More about types
+./devdocs/types.md	##	 Types and sets (and `Any` and `Union{}`/`Bottom`)
+./devdocs/types.md	##	 UnionAll types
+./devdocs/types.md	##	 Free variables
+./devdocs/types.md	##	 TypeNames
+./devdocs/types.md	##	 Tuple types
+./devdocs/types.md	##	 Diagonal types
+./devdocs/types.md	##	 Subtyping diagonal variables
+./devdocs/types.md	##	 Introduction to the internal machinery
+./devdocs/types.md	##	 Subtyping and method sorting
+./devdocs/valgrind.md	#	 Using Valgrind with Julia
+./devdocs/valgrind.md	##	 General considerations
+./devdocs/valgrind.md	##	 Suppressions
+./devdocs/valgrind.md	##	 Running the Julia test suite under Valgrind
+./devdocs/valgrind.md	##	 Caveats
+./index.md	#	 Julia Documentation
+./index.md	##	 Manual
+./index.md	##	 Standard Library
+./index.md	##	 Developer Documentation
+./manual/arrays.md	#	 [Multi-dimensional Arrays]	(@id man-multi-dim-arrays)
+./manual/arrays.md	##	 Arrays
+./manual/arrays.md	###	 Basic Functions
+./manual/arrays.md	###	 Construction and Initialization
+./manual/arrays.md	###	 Concatenation
+./manual/arrays.md	###	 Typed array initializers
+./manual/arrays.md	###	 Comprehensions
+./manual/arrays.md	###	 Generator Expressions
+./manual/arrays.md	###	 [Indexing]	(@id man-array-indexing)
+./manual/arrays.md	###	 Assignment
+./manual/arrays.md	###	 [Supported index types]	(@id man-supported-index-types)
+./manual/arrays.md	####	 Cartesian indices
+./manual/arrays.md	####	 Logical indexing
+./manual/arrays.md	###	 Iteration
+./manual/arrays.md	###	 Array traits
+./manual/arrays.md	###	 Array and Vectorized Operators and Functions
+./manual/arrays.md	###	 Broadcasting
+./manual/arrays.md	###	 Implementation
+./manual/arrays.md	##	 Sparse Vectors and Matrices
+./manual/arrays.md	###	 [Compressed Sparse Column (CSC) Sparse Matrix Storage]	(@id man-csc)
+./manual/arrays.md	###	 Sparse Vector Storage
+./manual/arrays.md	###	 Sparse Vector and Matrix Constructors
+./manual/arrays.md	###	 Sparse matrix operations
+./manual/arrays.md	###	 Correspondence of dense and sparse methods
+./manual/calling-c-and-fortran-code.md	#	 Calling C and Fortran Code
+./manual/calling-c-and-fortran-code.md	##	 Creating C-Compatible Julia Function Pointers
+./manual/calling-c-and-fortran-code.md	##	 Mapping C Types to Julia
+./manual/calling-c-and-fortran-code.md	###	 Auto-conversion:
+./manual/calling-c-and-fortran-code.md	###	 Type Correspondences:
+./manual/calling-c-and-fortran-code.md	###	 Bits Types:
+./manual/calling-c-and-fortran-code.md	###	 Struct Type correspondences
+./manual/calling-c-and-fortran-code.md	###	 Type Parameters
+./manual/calling-c-and-fortran-code.md	###	 SIMD Values
+./manual/calling-c-and-fortran-code.md	###	 Memory Ownership
+./manual/calling-c-and-fortran-code.md	###	 When to use T, Ptr{T} and Ref{T}
+./manual/calling-c-and-fortran-code.md	##	 Mapping C Functions to Julia
+./manual/calling-c-and-fortran-code.md	###	 `ccall`/`cfunction` argument translation guide
+./manual/calling-c-and-fortran-code.md	###	 `ccall`/`cfunction` return type translation guide
+./manual/calling-c-and-fortran-code.md	###	 Passing Pointers for Modifying Inputs
+./manual/calling-c-and-fortran-code.md	###	 Special Reference Syntax for ccall (deprecated):
+./manual/calling-c-and-fortran-code.md	##	 Some Examples of C Wrappers
+./manual/calling-c-and-fortran-code.md	#	 The corresponding C signature is
+./manual/calling-c-and-fortran-code.md	#	     gsl_permutation * gsl_permutation_alloc (size_t n);
+./manual/calling-c-and-fortran-code.md	#	 The corresponding C signature is
+./manual/calling-c-and-fortran-code.md	#	     void gsl_permutation_free (gsl_permutation * p);
+./manual/calling-c-and-fortran-code.md	#	 The corresponding C signature is
+./manual/calling-c-and-fortran-code.md	#	    int gsl_sf_bessel_Jn_array (int nmin, int nmax, double x,
+./manual/calling-c-and-fortran-code.md	#	                                double result_array[])
+./manual/calling-c-and-fortran-code.md	##	 Garbage Collection Safety
+./manual/calling-c-and-fortran-code.md	##	 Non-constant Function Specifications
+./manual/calling-c-and-fortran-code.md	##	 Indirect Calls
+./manual/calling-c-and-fortran-code.md	##	 Closing a Library
+./manual/calling-c-and-fortran-code.md	##	 Calling Convention
+./manual/calling-c-and-fortran-code.md	##	 Accessing Global Variables
+./manual/calling-c-and-fortran-code.md	##	 Accessing Data through a Pointer
+./manual/calling-c-and-fortran-code.md	##	 Thread-safety
+./manual/calling-c-and-fortran-code.md	##	 More About Callbacks
+./manual/calling-c-and-fortran-code.md	##	 C++
+./manual/complex-and-rational-numbers.md	#	 Complex and Rational Numbers
+./manual/complex-and-rational-numbers.md	##	 Complex Numbers
+./manual/complex-and-rational-numbers.md	##	 Rational Numbers
+./manual/constructors.md	#	 [Constructors]	(@id man-constructors)
+./manual/constructors.md	##	 Outer Constructor Methods
+./manual/constructors.md	##	 Inner Constructor Methods
+./manual/constructors.md	##	 Incomplete Initialization
+./manual/constructors.md	##	 Parametric Constructors
+./manual/constructors.md	##	 Case Study: Rational
+./manual/constructors.md	##	 [Constructors and Conversion]	(@id constructors-and-conversion)
+./manual/constructors.md	##	 Outer-only constructors
+./manual/control-flow.md	#	 Control Flow
+./manual/control-flow.md	##	 [Compound Expressions]	(@id man-compound-expressions)
+./manual/control-flow.md	##	 [Conditional Evaluation]	(@id man-conditional-evaluation)
+./manual/control-flow.md	##	 Short-Circuit Evaluation
+./manual/control-flow.md	##	 [Repeated Evaluation: Loops]	(@id man-loops)
+./manual/control-flow.md	##	 Exception Handling
+./manual/control-flow.md	###	 Built-in `Exception`s
+./manual/control-flow.md	###	 The [`throw`](@ref) function
+./manual/control-flow.md	###	 Errors
+./manual/control-flow.md	###	 Warnings and informational messages
+./manual/control-flow.md	###	 The `try/catch` statement
+./manual/control-flow.md	###	 `finally` Clauses
+./manual/control-flow.md	##	 [Tasks (aka Coroutines)]	(@id man-tasks)
+./manual/control-flow.md	#	 or, equivalently
+./manual/control-flow.md	###	 Core task operations
+./manual/control-flow.md	###	 Tasks and events
+./manual/control-flow.md	###	 Task states
+./manual/conversion-and-promotion.md	#	 [Conversion and Promotion]	(@id conversion-and-promotion)
+./manual/conversion-and-promotion.md	##	 Conversion
+./manual/conversion-and-promotion.md	###	 Defining New Conversions
+./manual/conversion-and-promotion.md	###	 [Case Study: Rational Conversions]	(@id man-rational-conversion)
+./manual/conversion-and-promotion.md	##	 Promotion
+./manual/conversion-and-promotion.md	###	 Defining Promotion Rules
+./manual/conversion-and-promotion.md	###	 Case Study: Rational Promotions
+./manual/dates.md	#	 Date and DateTime
+./manual/dates.md	##	 Constructors
+./manual/dates.md	##	 Durations/Comparisons
+./manual/dates.md	##	 Accessor Functions
+./manual/dates.md	##	 Query Functions
+./manual/dates.md	##	 TimeType-Period Arithmetic
+./manual/dates.md	##	 Adjuster Functions
+./manual/dates.md	#	 Pittsburgh street cleaning; Every 2nd Tuesday from April to November
+./manual/dates.md	#	 Date range from January 1st, 2014 to January 1st, 2015
+./manual/dates.md	##	 Period Types
+./manual/dates.md	##	 Rounding
+./manual/dates.md	###	 Rounding Epoch
+./manual/documentation.md	#	 Documentation
+./manual/documentation.md	#	 Examples
+./manual/documentation.md	##	 Accessing Documentation
+./manual/documentation.md	##	 Functions & Methods
+./manual/documentation.md	##	 Advanced Usage
+./manual/documentation.md	###	 Dynamic documentation
+./manual/documentation.md	##	 Syntax Guide
+./manual/documentation.md	###	 Functions and Methods
+./manual/documentation.md	###	 Macros
+./manual/documentation.md	###	 Types
+./manual/documentation.md	###	 Modules
+./manual/documentation.md	#	 ...
+./manual/documentation.md	###	 Global Variables
+./manual/documentation.md	###	 Multiple Objects
+./manual/documentation.md	###	 Macro-generated code
+./manual/documentation.md	##	 Markdown syntax
+./manual/documentation.md	###	 Inline elements
+./manual/documentation.md	####	 Bold
+./manual/documentation.md	####	 Italics
+./manual/documentation.md	####	 Literals
+./manual/documentation.md	####	 ``\LaTeX``
+./manual/documentation.md	####	 Links
+./manual/documentation.md	####	 Footnote references
+./manual/documentation.md	###	 Toplevel elements
+./manual/documentation.md	####	 Paragraphs
+./manual/documentation.md	####	 Headers
+./manual/documentation.md	#	 Level One
+./manual/documentation.md	##	 Level Two
+./manual/documentation.md	###	 Level Three
+./manual/documentation.md	####	 Level Four
+./manual/documentation.md	#####	 Level Five
+./manual/documentation.md	######	 Level Six
+./manual/documentation.md	####	 Code blocks
+./manual/documentation.md	####	 Block quotes
+./manual/documentation.md	####	 Images
+./manual/documentation.md	####	 Lists
+./manual/documentation.md	####	 Display equations
+./manual/documentation.md	####	 Footnotes
+./manual/documentation.md	####	 Horizontal rules
+./manual/documentation.md	####	 Tables
+./manual/documentation.md	####	 Admonitions
+./manual/documentation.md	##	 Markdown Syntax Extensions
+./manual/embedding.md	#	 Embedding Julia
+./manual/embedding.md	##	 High-Level Embedding
+./manual/embedding.md	###	 Using julia-config to automatically determine build parameters
+./manual/embedding.md	####	 Example
+./manual/embedding.md	####	 On the command line
+./manual/embedding.md	####	 Use in Makefiles
+./manual/embedding.md	##	 Converting Types
+./manual/embedding.md	##	 Calling Julia Functions
+./manual/embedding.md	##	 Memory Management
+./manual/embedding.md	###	 Manipulating the Garbage Collector
+./manual/embedding.md	##	 Working with Arrays
+./manual/embedding.md	###	 Accessing Returned Arrays
+./manual/embedding.md	###	 Multidimensional Arrays
+./manual/embedding.md	##	 Exceptions
+./manual/embedding.md	###	 Throwing Julia Exceptions
+./manual/environment-variables.md	#	 Environment Variables
+./manual/environment-variables.md	##	 File locations
+./manual/environment-variables.md	###	 `JULIA_HOME`
+./manual/environment-variables.md	###	 `JULIA_LOAD_PATH`
+./manual/environment-variables.md	###	 `JULIA_PKGDIR`
+./manual/environment-variables.md	###	 `JULIA_HISTORY`
+./manual/environment-variables.md	###	 `JULIA_PKGRESOLVE_ACCURACY`
+./manual/environment-variables.md	##	 External applications
+./manual/environment-variables.md	###	 `JULIA_SHELL`
+./manual/environment-variables.md	###	 `JULIA_EDITOR`
+./manual/environment-variables.md	##	 Parallelization
+./manual/environment-variables.md	###	 `JULIA_CPU_CORES`
+./manual/environment-variables.md	###	 `JULIA_WORKER_TIMEOUT`
+./manual/environment-variables.md	###	 `JULIA_NUM_THREADS`
+./manual/environment-variables.md	###	 `JULIA_THREAD_SLEEP_THRESHOLD`
+./manual/environment-variables.md	###	 `JULIA_EXCLUSIVE`
+./manual/environment-variables.md	##	 REPL formatting
+./manual/environment-variables.md	###	 `JULIA_ERROR_COLOR`
+./manual/environment-variables.md	###	 `JULIA_WARN_COLOR`
+./manual/environment-variables.md	###	 `JULIA_INFO_COLOR`
+./manual/environment-variables.md	###	 `JULIA_INPUT_COLOR`
+./manual/environment-variables.md	###	 `JULIA_ANSWER_COLOR`
+./manual/environment-variables.md	###	 `JULIA_STACKFRAME_LINEINFO_COLOR`
+./manual/environment-variables.md	###	 `JULIA_STACKFRAME_FUNCTION_COLOR`
+./manual/environment-variables.md	##	 Debugging and profiling
+./manual/environment-variables.md	###	 `JULIA_GC_ALLOC_POOL`, `JULIA_GC_ALLOC_OTHER`, `JULIA_GC_ALLOC_PRINT`
+./manual/environment-variables.md	###	 `JULIA_GC_NO_GENERATIONAL`
+./manual/environment-variables.md	###	 `JULIA_GC_WAIT_FOR_DEBUGGER`
+./manual/environment-variables.md	###	 `ENABLE_JITPROFILING`
+./manual/environment-variables.md	###	 `JULIA_LLVM_ARGS`
+./manual/environment-variables.md	###	 `JULIA_DEBUG_LOADING`
+./manual/faq.md	#	 Frequently Asked Questions
+./manual/faq.md	##	 Sessions and the REPL
+./manual/faq.md	###	 How do I delete an object in memory?
+./manual/faq.md	###	 How can I modify the declaration of a type in my session?
+./manual/faq.md	#	 Got an error. Change something in "mynewcode.jl"
+./manual/faq.md	##	 Functions
+./manual/faq.md	###	 I passed an argument `x` to a function, modified it inside that function, but on the outside, the variable `x` is still unchanged. Why?
+./manual/faq.md	###	 Can I use `using` or `import` inside a function?
+./manual/faq.md	###	 What does the `...` operator do?
+./manual/faq.md	###	 The two uses of the `...` operator: slurping and splatting
+./manual/faq.md	###	 `...` combines many arguments into one argument in function definitions
+./manual/faq.md	###	 `...` splits one argument into many different arguments in function calls
+./manual/faq.md	###	 What is the return value of an assignment?
+./manual/faq.md	##	 Types, type declarations, and constructors
+./manual/faq.md	###	 [What does "type-stable" mean?]	(@id man-type-stability)
+./manual/faq.md	###	 [Why does Julia give a `DomainError` for certain seemingly-sensible operations?]	(@id faq-domain-errors)
+./manual/faq.md	###	 Why does Julia use native machine integer arithmetic?
+./manual/faq.md	###	 What are the possible causes of an `UndefVarError` during remote execution?
+./manual/faq.md	##	 Packages and Modules
+./manual/faq.md	###	 What is the difference between "using" and "import"?
+./manual/faq.md	##	 Nothingness and missing values
+./manual/faq.md	###	 How does "null" or "nothingness" work in Julia?
+./manual/faq.md	##	 Memory
+./manual/faq.md	###	 Why does `x += y` allocate memory when `x` and `y` are arrays?
+./manual/faq.md	##	 Asynchronous IO and concurrent synchronous writes
+./manual/faq.md	###	 Why do concurrent writes to the same stream result in inter-mixed output?
+./manual/faq.md	##	 Julia Releases
+./manual/faq.md	###	 Do I want to use a release, beta, or nightly version of Julia?
+./manual/faq.md	###	 When are deprecated functions removed?
+./manual/functions.md	#	 [Functions]	(@id man-functions)
+./manual/functions.md	##	 Argument Passing Behavior
+./manual/functions.md	##	 The `return` Keyword
+./manual/functions.md	##	 Operators Are Functions
+./manual/functions.md	##	 Operators With Special Names
+./manual/functions.md	##	 [Anonymous Functions]	(@id man-anonymous-functions)
+./manual/functions.md	##	 Tuples
+./manual/functions.md	##	 Named Tuples
+./manual/functions.md	##	 Multiple Return Values
+./manual/functions.md	##	 Argument destructuring
+./manual/functions.md	##	 Varargs Functions
+./manual/functions.md	##	 Optional Arguments
+./manual/functions.md	##	 Keyword Arguments
+./manual/functions.md	##	 Evaluation Scope of Default Values
+./manual/functions.md	##	 Do-Block Syntax for Function Arguments
+./manual/functions.md	##	 [Dot Syntax for Vectorizing Functions]	(@id man-vectorized)
+./manual/functions.md	##	 Further Reading
+./manual/getting-started.md	#	 Getting Started
+./manual/getting-started.md	##	 Resources
+./manual/handling-operating-system-variation.md	#	 Handling Operating System Variation
+./manual/index.md	#	 The Julia Manual
+./manual/integers-and-floating-point-numbers.md	#	 Integers and Floating-Point Numbers
+./manual/integers-and-floating-point-numbers.md	##	 Integers
+./manual/integers-and-floating-point-numbers.md	#	 32-bit system:
+./manual/integers-and-floating-point-numbers.md	#	 64-bit system:
+./manual/integers-and-floating-point-numbers.md	#	 32-bit system:
+./manual/integers-and-floating-point-numbers.md	#	 64-bit system:
+./manual/integers-and-floating-point-numbers.md	#	 32-bit system:
+./manual/integers-and-floating-point-numbers.md	#	 64-bit system:
+./manual/integers-and-floating-point-numbers.md	#	 32-bit or 64-bit system:
+./manual/integers-and-floating-point-numbers.md	###	 Overflow behavior
+./manual/integers-and-floating-point-numbers.md	###	 Division errors
+./manual/integers-and-floating-point-numbers.md	##	 Floating-Point Numbers
+./manual/integers-and-floating-point-numbers.md	###	 Floating-point zero
+./manual/integers-and-floating-point-numbers.md	###	 Special floating-point values
+./manual/integers-and-floating-point-numbers.md	###	 Machine epsilon
+./manual/integers-and-floating-point-numbers.md	###	 Rounding modes
+./manual/integers-and-floating-point-numbers.md	###	 Background and References
+./manual/integers-and-floating-point-numbers.md	##	 Arbitrary Precision Arithmetic
+./manual/integers-and-floating-point-numbers.md	##	 [Numeric Literal Coefficients]	(@id man-numeric-literal-coefficients)
+./manual/integers-and-floating-point-numbers.md	###	 Syntax Conflicts
+./manual/integers-and-floating-point-numbers.md	##	 Literal zero and one
+./manual/interacting-with-julia.md	#	 Interacting With Julia
+./manual/interacting-with-julia.md	##	 The different prompt modes
+./manual/interacting-with-julia.md	###	 The Julian mode
+./manual/interacting-with-julia.md	###	 Help mode
+./manual/interacting-with-julia.md	###	 [Shell mode]	(@id man-shell-mode)
+./manual/interacting-with-julia.md	###	 Search modes
+./manual/interacting-with-julia.md	##	 Key bindings
+./manual/interacting-with-julia.md	###	 Customizing keybindings
+./manual/interacting-with-julia.md	##	 Tab completion
+./manual/interacting-with-julia.md	##	 Customizing Colors
+./manual/interfaces.md	#	 Interfaces
+./manual/interfaces.md	##	 [Iteration]	(@id man-interface-iteration)
+./manual/interfaces.md	##	 Indexing
+./manual/interfaces.md	##	 [Abstract Arrays]	(@id man-interface-array)
+./manual/interfaces.md	##	 [Broadcasting]	(@id man-interfaces-broadcasting)
+./manual/interfaces.md	###	 [Writing binary broadcasting rules]	(@id writing-binary-broadcasting-rules)
+./manual/introduction.md	#	 [Introduction]	(@id man-introduction)
+./manual/linear-algebra.md	#	 Linear algebra
+./manual/linear-algebra.md	##	 Special matrices
+./manual/linear-algebra.md	###	 Elementary operations
+./manual/linear-algebra.md	###	 Matrix factorizations
+./manual/linear-algebra.md	###	 The uniform scaling operator
+./manual/linear-algebra.md	##	 [Matrix factorizations]	(@id man-linalg-factorizations)
+./manual/mathematical-operations.md	#	 Mathematical Operations and Elementary Functions
+./manual/mathematical-operations.md	##	 Arithmetic Operators
+./manual/mathematical-operations.md	##	 Bitwise Operators
+./manual/mathematical-operations.md	##	 Updating operators
+./manual/mathematical-operations.md	##	 [Vectorized "dot" operators]	(@id man-dot-operators)
+./manual/mathematical-operations.md	##	 Numeric Comparisons
+./manual/mathematical-operations.md	###	 Chaining comparisons
+./manual/mathematical-operations.md	###	 Elementary Functions
+./manual/mathematical-operations.md	##	 Operator Precedence and Associativity
+./manual/mathematical-operations.md	##	 Numerical Conversions
+./manual/mathematical-operations.md	###	 Rounding functions
+./manual/mathematical-operations.md	###	 Division functions
+./manual/mathematical-operations.md	###	 Sign and absolute value functions
+./manual/mathematical-operations.md	###	 Powers, logs and roots
+./manual/mathematical-operations.md	###	 Trigonometric and hyperbolic functions
+./manual/mathematical-operations.md	###	 Special functions
+./manual/metaprogramming.md	#	 Metaprogramming
+./manual/metaprogramming.md	##	 Program representation
+./manual/metaprogramming.md	###	 Symbols
+./manual/metaprogramming.md	##	 Expressions and evaluation
+./manual/metaprogramming.md	###	 Quoting
+./manual/metaprogramming.md	###	 Interpolation
+./manual/metaprogramming.md	###	 Splatting interpolation
+./manual/metaprogramming.md	###	 Nested quote
+./manual/metaprogramming.md	###	 QuoteNode
+./manual/metaprogramming.md	###	 [`eval`](@ref) and effects
+./manual/metaprogramming.md	###	 Functions on `Expr`essions
+./manual/metaprogramming.md	##	 [Macros]	(@id man-macros)
+./manual/metaprogramming.md	###	 Basics
+./manual/metaprogramming.md	###	 Hold up: why macros?
+./manual/metaprogramming.md	###	 Macro invocation
+./manual/metaprogramming.md	###	 Building an advanced macro
+./manual/metaprogramming.md	###	 Hygiene
+./manual/metaprogramming.md	###	 Macros and dispatch
+./manual/metaprogramming.md	##	 Code Generation
+./manual/metaprogramming.md	##	 Non-Standard String Literals
+./manual/metaprogramming.md	##	 Generated functions
+./manual/metaprogramming.md	###	 An advanced example
+./manual/metaprogramming.md	###	 Optionally-generated functions
+./manual/methods.md	#	 Methods
+./manual/methods.md	##	 Defining Methods
+./manual/methods.md	#	 2 methods for generic function "f":
+./manual/methods.md	#	 180 methods for generic function "+":
+./manual/methods.md	##	 [Method Ambiguities]	(@id man-ambiguities)
+./manual/methods.md	##	 Parametric Methods
+./manual/methods.md	##	 Design Patterns with Parametric Methods
+./manual/methods.md	###	 Extracting the type parameter from a super-type
+./manual/methods.md	###	 Building a similar type with a different type parameter
+./manual/methods.md	###	 Iterated dispatch
+./manual/methods.md	#	 First dispatch selects the map algorithm for element-wise summation.
+./manual/methods.md	#	 Then dispatch handles each element and selects the appropriate
+./manual/methods.md	#	 common element type for the computation.
+./manual/methods.md	#	 Once the elements have the same type, they can be added.
+./manual/methods.md	#	 For example, via primitive operations exposed by the processor.
+./manual/methods.md	###	 Trait-based dispatch
+./manual/methods.md	#	 generic implementation:
+./manual/methods.md	#	 linear-indexing implementation (faster)
+./manual/methods.md	###	 Output-type computation
+./manual/methods.md	###	 Separate convert and kernel logic
+./manual/methods.md	##	 Parametrically-constrained Varargs methods
+./manual/methods.md	##	 Note on Optional and keyword Arguments
+./manual/methods.md	##	 Function-like objects
+./manual/methods.md	##	 Empty generic functions
+./manual/methods.md	##	 [Method design and the avoidance of ambiguities]	(@id man-method-design-ambiguities)
+./manual/methods.md	###	 Tuple and NTuple arguments
+./manual/methods.md	###	 [Orthogonalize your design]	(@id man-methods-orthogonalize)
+./manual/methods.md	###	 Dispatch on one argument at a time
+./manual/methods.md	###	 Abstract containers and element types
+./manual/methods.md	###	 Complex method "cascades" with default arguments
+./manual/methods.md	#	 other padding methods go here
+./manual/modules.md	#	 [Modules]	(@id modules)
+./manual/modules.md	##	 Summary of module usage
+./manual/modules.md	###	 Modules and files
+./manual/modules.md	###	 Standard modules
+./manual/modules.md	###	 Default top-level definitions and bare modules
+./manual/modules.md	###	 Relative and absolute module paths
+./manual/modules.md	###	 Module file paths
+./manual/modules.md	###	 Namespace miscellanea
+./manual/modules.md	###	 Module initialization and precompilation
+./manual/networking-and-streams.md	#	 Networking and Streams
+./manual/networking-and-streams.md	##	 Basic Stream I/O
+./manual/networking-and-streams.md	##	 Text I/O
+./manual/networking-and-streams.md	##	 IO Output Contextual Properties
+./manual/networking-and-streams.md	##	 Working with Files
+./manual/networking-and-streams.md	##	 A simple TCP example
+./manual/networking-and-streams.md	##	 Resolving IP Addresses
+./manual/noteworthy-differences.md	#	 Noteworthy Differences from other Languages
+./manual/noteworthy-differences.md	##	 Noteworthy differences from MATLAB
+./manual/noteworthy-differences.md	##	 Noteworthy differences from R
+./manual/noteworthy-differences.md	##	 Noteworthy differences from Python
+./manual/noteworthy-differences.md	##	 Noteworthy differences from C/C++
+./manual/packages.md	#	 Packages
+./manual/packages.md	##	 Package Status
+./manual/packages.md	##	 Adding and Removing Packages
+./manual/packages.md	##	 Offline Installation of Packages
+./manual/packages.md	##	 Installing Unregistered Packages
+./manual/packages.md	##	 Updating Packages
+./manual/packages.md	##	 Checkout, Pin and Free
+./manual/packages.md	##	 Custom METADATA Repository
+./manual/packages.md	#	 Package Development
+./manual/packages.md	##	 [Initial Setup]	(@id man-initial-setup)
+./manual/packages.md	##	 Making changes to an existing package
+./manual/packages.md	###	 Documentation changes
+./manual/packages.md	###	 Code changes
+./manual/packages.md	####	 Executive summary
+./manual/packages.md	####	 Detailed description
+./manual/packages.md	###	 Dirty packages
+./manual/packages.md	###	 [Making a branch *post hoc*]	(@id man-branch-post-hoc)
+./manual/packages.md	###	 [Squashing and rebasing]	(@id man-squashing-and-rebasing)
+./manual/packages.md	##	 Creating a new Package
+./manual/packages.md	###	 REQUIRE speaks for itself
+./manual/packages.md	###	 Guidelines for naming a package
+./manual/packages.md	###	 Generating the package
+./manual/packages.md	###	 Loading Static Non-Julia Files
+./manual/packages.md	###	 Making Your Package Available
+./manual/packages.md	###	 Tagging and Publishing Your Package
+./manual/packages.md	####	 Publishing METADATA manually
+./manual/packages.md	##	 Fixing Package Requirements
+./manual/packages.md	##	 Requirements Specification
+./manual/parallel-computing.md	#	 Parallel Computing
+./manual/parallel-computing.md	##	 Code Availability and Loading Packages
+./manual/parallel-computing.md	##	 Data Movement
+./manual/parallel-computing.md	#	 Global variables
+./manual/parallel-computing.md	##	 Parallel Map and Loops
+./manual/parallel-computing.md	##	 Synchronization With Remote References
+./manual/parallel-computing.md	##	 Scheduling
+./manual/parallel-computing.md	##	 Channels
+./manual/parallel-computing.md	##	 Remote References and AbstractChannels
+./manual/parallel-computing.md	##	 Channels and RemoteChannels
+./manual/parallel-computing.md	##	 Remote References and Distributed Garbage Collection
+./manual/parallel-computing.md	##	 [Shared Arrays]	(@id man-shared-arrays)
+./manual/parallel-computing.md	##	 Shared Arrays and Distributed Garbage Collection
+./manual/parallel-computing.md	##	 ClusterManagers
+./manual/parallel-computing.md	##	 Cluster Managers with Custom Transports
+./manual/parallel-computing.md	##	 Network Requirements for LocalManager and SSHManager
+./manual/parallel-computing.md	##	 Cluster Cookie
+./manual/parallel-computing.md	##	 Specifying Network Topology (Experimental)
+./manual/parallel-computing.md	##	 Multi-Threading (Experimental)
+./manual/parallel-computing.md	###	 Setup
+./manual/parallel-computing.md	###	 The `@threads` Macro
+./manual/parallel-computing.md	##	 @threadcall (Experimental)
+./manual/performance-tips.md	#	 [Performance Tips]	(@id man-performance-tips)
+./manual/performance-tips.md	##	 Avoid global variables
+./manual/performance-tips.md	##	 Measure performance with [`@time`](@ref) and pay attention to memory allocation
+./manual/performance-tips.md	##	 [Tools]	(@id tools)
+./manual/performance-tips.md	##	 Avoid containers with abstract type parameters
+./manual/performance-tips.md	##	 Type declarations
+./manual/performance-tips.md	###	 Avoid fields with abstract type
+./manual/performance-tips.md	###	 Avoid fields with abstract containers
+./manual/performance-tips.md	###	 Annotate values taken from untyped locations
+./manual/performance-tips.md	###	 Declare types of keyword arguments
+./manual/performance-tips.md	##	 Break functions into multiple definitions
+./manual/performance-tips.md	##	 Write "type-stable" functions
+./manual/performance-tips.md	##	 Avoid changing the type of a variable
+./manual/performance-tips.md	##	 [Separate kernel functions (aka, function barriers)]	(@id kernal-functions)
+./manual/performance-tips.md	##	 Types with values-as-parameters
+./manual/performance-tips.md	##	 The dangers of abusing multiple dispatch (aka, more on types with values-as-parameters)
+./manual/performance-tips.md	##	 Access arrays in memory order, along columns
+./manual/performance-tips.md	##	 Pre-allocating outputs
+./manual/performance-tips.md	##	 More dots: Fuse vectorized operations
+./manual/performance-tips.md	##	 Consider using views for slices
+./manual/performance-tips.md	##	 Copying data is not always bad
+./manual/performance-tips.md	##	 Avoid string interpolation for I/O
+./manual/performance-tips.md	##	 Optimize network I/O during parallel execution
+./manual/performance-tips.md	##	 Fix deprecation warnings
+./manual/performance-tips.md	##	 Tweaks
+./manual/performance-tips.md	##	 [Performance Annotations]	(@id man-performance-annotations)
+./manual/performance-tips.md	##	 Treat Subnormal Numbers as Zeros
+./manual/performance-tips.md	##	 [[`@code_warntype`](@ref)]	(@id man-code-warntype)
+./manual/profile.md	#	 Profiling
+./manual/profile.md	##	 Basic usage
+./manual/profile.md	##	 Accumulation and clearing
+./manual/profile.md	##	 Options for controlling the display of profile results
+./manual/profile.md	##	 Configuration
+./manual/profile.md	#	 Memory allocation analysis
+./manual/running-external-programs.md	#	 Running External Programs
+./manual/running-external-programs.md	##	 [Interpolation]	(@id command-interpolation)
+./manual/running-external-programs.md	##	 Quoting
+./manual/running-external-programs.md	##	 Pipelines
+./manual/running-external-programs.md	###	 Avoiding Deadlock in Pipelines
+./manual/running-external-programs.md	###	 Complex Example
+./manual/stacktraces.md	#	 Stack Traces
+./manual/stacktraces.md	##	 Viewing a stack trace
+./manual/stacktraces.md	##	 Extracting useful information
+./manual/stacktraces.md	##	 Error handling
+./manual/stacktraces.md	##	 Comparison with [`backtrace`](@ref)
+./manual/strings.md	#	 [Strings]	(@id man-strings)
+./manual/strings.md	##	 [Characters]	(@id man-characters)
+./manual/strings.md	##	 String Basics
+./manual/strings.md	##	 Unicode and UTF-8
+./manual/strings.md	##	 Concatenation
+./manual/strings.md	##	 [Interpolation]	(@id string-interpolation)
+./manual/strings.md	##	 Triple-Quoted String Literals
+./manual/strings.md	##	 Common Operations
+./manual/strings.md	##	 [Non-Standard String Literals]	(@id non-standard-string-literals)
+./manual/strings.md	##	 Regular Expressions
+./manual/strings.md	##	 [Byte Array Literals]	(@id man-byte-array-literals)
+./manual/strings.md	##	 [Version Number Literals]	(@id man-version-number-literals)
+./manual/strings.md	##	 [Raw String Literals]	(@id man-raw-string-literals)
+./manual/style-guide.md	#	 Style Guide
+./manual/style-guide.md	##	 Write functions, not just scripts
+./manual/style-guide.md	##	 Avoid writing overly-specific types
+./manual/style-guide.md	##	 Handle excess argument diversity in the caller
+./manual/style-guide.md	##	 Append `!` to names of functions that modify their arguments
+./manual/style-guide.md	##	 Avoid strange type `Union`s
+./manual/style-guide.md	##	 Avoid type Unions in fields
+./manual/style-guide.md	##	 Avoid elaborate container types
+./manual/style-guide.md	##	 Use naming conventions consistent with Julia's `base/`
+./manual/style-guide.md	##	 Don't overuse try-catch
+./manual/style-guide.md	##	 Don't parenthesize conditions
+./manual/style-guide.md	##	 Don't overuse `...`
+./manual/style-guide.md	##	 Don't use unnecessary static parameters
+./manual/style-guide.md	##	 Avoid confusion about whether something is an instance or a type
+./manual/style-guide.md	##	 Don't overuse macros
+./manual/style-guide.md	##	 Don't expose unsafe operations at the interface level
+./manual/style-guide.md	##	 Don't overload methods of base container types
+./manual/style-guide.md	##	 Avoid type piracy
+./manual/style-guide.md	##	 Be careful with type equality
+./manual/style-guide.md	##	 Do not write `x->f(x)`
+./manual/style-guide.md	##	 Avoid using floats for numeric literals in generic code when possible
+./manual/types.md	#	 [Types]	(@id man-types)
+./manual/types.md	##	 Type Declarations
+./manual/types.md	##	 Abstract Types
+./manual/types.md	##	 Primitive Types
+./manual/types.md	##	 Composite Types
+./manual/types.md	##	 Mutable Composite Types
+./manual/types.md	##	 Declared Types
+./manual/types.md	##	 Type Unions
+./manual/types.md	##	 Parametric Types
+./manual/types.md	###	 Parametric Composite Types
+./manual/types.md	###	 Parametric Abstract Types
+./manual/types.md	###	 Tuple Types
+./manual/types.md	###	 Vararg Tuple Types
+./manual/types.md	###	 Named Tuple Types
+./manual/types.md	####	 [Singleton Types]	(@id man-singleton-types)
+./manual/types.md	###	 Parametric Primitive Types
+./manual/types.md	#	 32-bit system:
+./manual/types.md	#	 64-bit system:
+./manual/types.md	##	 UnionAll Types
+./manual/types.md	##	 Type Aliases
+./manual/types.md	#	 32-bit system:
+./manual/types.md	#	 64-bit system:
+./manual/types.md	##	 Operations on Types
+./manual/types.md	##	 Custom pretty-printing
+./manual/types.md	##	 "Value types"
+./manual/types.md	##	 [Nullable Types: Representing Missing Values]	(@id man-nullable-types)
+./manual/types.md	###	 Constructing [`Nullable`](@ref) objects
+./manual/types.md	###	 Checking if a `Nullable` object has a value
+./manual/types.md	###	 Safely accessing the value of a `Nullable` object
+./manual/types.md	###	 Performing operations on `Nullable` objects
+./manual/unicode-input.md	#	 Unicode Input
+./manual/unicode-input.md	#	 Generate a table containing all LaTeX and Emoji tab completions available in the REPL.
+./manual/unicode-input.md	#	 Surround combining characters with no-break spaces (i.e '\u00A0'). Follows the same format
+./manual/unicode-input.md	#	 for how unicode is displayed on the unicode.org website:
+./manual/unicode-input.md	#	 http://unicode.org/cldr/utility/character.jsp?a=0300
+./manual/variables-and-scoping.md	#	 [Scope of Variables]	(@id scope-of-variables)
+./manual/variables-and-scoping.md	#	 []	(@id man-scope-table)
+./manual/variables-and-scoping.md	##	 Global Scope
+./manual/variables-and-scoping.md	##	 Local Scope
+./manual/variables-and-scoping.md	###	 Let Blocks
+./manual/variables-and-scoping.md	###	 For Loops and Comprehensions
+./manual/variables-and-scoping.md	##	 Constants
+./manual/variables.md	#	 Variables
+./manual/variables.md	#	 Assign the value 10 to the variable x
+./manual/variables.md	#	 Doing math with x's value
+./manual/variables.md	#	 Reassign x's value
+./manual/variables.md	#	 You can assign values of other types, like strings of text
+./manual/variables.md	##	 Allowed Variable Names
+./manual/variables.md	##	 Stylistic Conventions
+./manual/workflow-tips.md	#	 [Workflow Tips]	(@id man-workflow-tips)
+./manual/workflow-tips.md	##	 REPL-based workflow
+./manual/workflow-tips.md	###	 A basic editor/REPL workflow
+./manual/workflow-tips.md	###	 Simplify initialization
+./manual/workflow-tips.md	##	 Browser-based workflow
+./stdlib/arrays.md	#	 [Arrays]	(@id lib-arrays)
+./stdlib/arrays.md	##	 Constructors and Types
+./stdlib/arrays.md	##	 Basic functions
+./stdlib/arrays.md	##	 Broadcast and vectorization
+./stdlib/arrays.md	##	 Indexing and assignment
+./stdlib/arrays.md	##	 Views (SubArrays and other view types)
+./stdlib/arrays.md	##	 Concatenation and permutation
+./stdlib/arrays.md	##	 Array functions
+./stdlib/arrays.md	##	 Combinatorics
+./stdlib/arrays.md	##	 BitArrays
+./stdlib/arrays.md	##	 [Sparse Vectors and Matrices]	(@id stdlib-sparse-arrays)
+./stdlib/base.md	#	 Essentials
+./stdlib/base.md	##	 Introduction
+./stdlib/base.md	##	 Getting Around
+./stdlib/base.md	##	 Keywords
+./stdlib/base.md	##	 Base Modules
+./stdlib/base.md	##	 All Objects
+./stdlib/base.md	##	 Dealing with Types
+./stdlib/base.md	##	 Special Types
+./stdlib/base.md	##	 Generic Functions
+./stdlib/base.md	##	 Syntax
+./stdlib/base.md	##	 Nullables
+./stdlib/base.md	##	 System
+./stdlib/base.md	##	 Errors
+./stdlib/base.md	##	 Events
+./stdlib/base.md	##	 Reflection
+./stdlib/base.md	##	 Internals
+./stdlib/c.md	#	 C Interface
+./stdlib/c.md	#	 LLVM Interface
+./stdlib/collections.md	#	 Collections and Data Structures
+./stdlib/collections.md	##	 [Iteration]	(@id lib-collections-iteration)
+./stdlib/collections.md	##	 General Collections
+./stdlib/collections.md	##	 Iterable Collections
+./stdlib/collections.md	##	 Indexable Collections
+./stdlib/collections.md	##	 Associative Collections
+./stdlib/collections.md	##	 Set-Like Collections
+./stdlib/collections.md	##	 Dequeues
+./stdlib/collections.md	##	 Utility Collections
+./stdlib/constants.md	#	 [Constants]	(@id lib-constants)
+./stdlib/dates.md	#	 [Dates and Time]	(@id stdlib-dates)
+./stdlib/dates.md	##	 Dates and Time Types
+./stdlib/dates.md	##	 Dates Functions
+./stdlib/dates.md	###	 Accessor Functions
+./stdlib/dates.md	###	 Query Functions
+./stdlib/dates.md	###	 Adjuster Functions
+./stdlib/dates.md	###	 Periods
+./stdlib/dates.md	###	 Rounding Functions
+./stdlib/dates.md	###	 Conversion Functions
+./stdlib/dates.md	###	 Constants
+./stdlib/file.md	#	 Filesystem
+./stdlib/index.md	#	 The Julia Standard Library
+./stdlib/io-network.md	#	 I/O and Network
+./stdlib/io-network.md	##	 General I/O
+./stdlib/io-network.md	##	 Text I/O
+./stdlib/io-network.md	##	 Multimedia I/O
+./stdlib/io-network.md	##	 Network I/O
+./stdlib/iterators.md	#	 Iteration utilities
+./stdlib/libc.md	#	 C Standard Library
+./stdlib/libdl.md	#	 Dynamic Linker
+./stdlib/linalg.md	#	 Linear Algebra
+./stdlib/linalg.md	##	 Standard Functions
+./stdlib/linalg.md	##	 Low-level matrix operations
+./stdlib/linalg.md	##	 BLAS Functions
+./stdlib/linalg.md	###	 [BLAS Character Arguments]	(@id stdlib-blas-chars)
+./stdlib/linalg.md	####	 [Multplication Order]	(@id stdlib-blas-side)
+./stdlib/linalg.md	####	 [Triangle Referencing]	(@id stdlib-blas-uplo)
+./stdlib/linalg.md	####	 [Transposition Operation]	(@id stdlib-blas-trans)
+./stdlib/linalg.md	####	 [Unit Diagonal]	(@id stdlib-blas-diag)
+./stdlib/linalg.md	##	 LAPACK Functions
+./stdlib/math.md	#	 Mathematics
+./stdlib/math.md	##	 [Mathematical Operators]	(@id math-ops)
+./stdlib/math.md	##	 Mathematical Functions
+./stdlib/math.md	##	 Statistics
+./stdlib/numbers.md	#	 [Numbers]	(@id lib-numbers)
+./stdlib/numbers.md	##	 Standard Numeric Types
+./stdlib/numbers.md	###	 Abstract number types
+./stdlib/numbers.md	###	 Concrete number types
+./stdlib/numbers.md	##	 Data Formats
+./stdlib/numbers.md	##	 General Number Functions and Constants
+./stdlib/numbers.md	###	 Integers
+./stdlib/numbers.md	##	 BigFloats
+./stdlib/numbers.md	##	 Random Numbers
+./stdlib/parallel.md	#	 Tasks and Parallel Computing
+./stdlib/parallel.md	##	 Tasks
+./stdlib/parallel.md	##	 General Parallel Computing Support
+./stdlib/parallel.md	##	 Multi-Threading
+./stdlib/parallel.md	##	 ccall using a threadpool (Experimental)
+./stdlib/parallel.md	##	 Synchronization Primitives
+./stdlib/parallel.md	##	 Cluster Manager Interface
+./stdlib/pkg.md	#	 Package Manager Functions
+./stdlib/profile.md	#	 [Profiling]	(@id lib-profiling)
+./stdlib/punctuation.md	#	 Punctuation
+./stdlib/simd-types.md	#	 SIMD Support
+./stdlib/sort.md	#	 Sorting and Related Functions
+./stdlib/sort.md	##	 Sorting Functions
+./stdlib/sort.md	##	 Order-Related Functions
+./stdlib/sort.md	##	 Sorting Algorithms
+./stdlib/stacktraces.md	#	 StackTraces
+./stdlib/strings.md	#	 [Strings]	(@id lib-strings)
